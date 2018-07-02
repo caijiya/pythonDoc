@@ -1,0 +1,123 @@
+class file(object)
+ |  file(name[, mode[, buffering]]) -> file object
+ |  
+ |  Open a file.  The mode can be 'r', 'w' or 'a' for reading (default),
+ |  writing or appending.  The file will be created if it doesn't exist
+ |  when opened for writing or appending; it will be truncated when
+ |  opened for writing.  Add a 'b' to the mode for binary files.
+ |  Add a '+' to the mode to allow simultaneous reading and writing.
+ |  If the buffering argument is given, 0 means unbuffered, 1 means line
+ |  buffered, and larger numbers specify the buffer size.  The preferred way
+ |  to open a file is with the builtin open() function.
+ |  Add a 'U' to mode to open the file for input with universal newline
+ |  support.  Any line ending in the input file will be seen as a '\n'
+ |  in Python.  Also, a file so opened gains the attribute 'newlines';
+ |  the value for this attribute is one of None (no newline read yet),
+ |  '\r', '\n', '\r\n' or a tuple containing all the newline types seen.
+ |  
+ |  'U' cannot be combined with 'w' or '+' mode.
+ |  
+ |  Methods defined here:
+ |  
+ |  __delattr__(...)
+ |      x.__delattr__('name') <==> del x.name
+ |  
+ |  __enter__(...)
+ |      __enter__() -> self.
+ |  
+ |  __exit__(...)
+ |      __exit__(*excinfo) -> None.  Closes the file.
+ |  
+ |  __getattribute__(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  __init__(...)
+ |      x.__init__(...) initializes x; see help(type(x)) for signature
+ |  
+ |  __iter__(...)
+ |      x.__iter__() <==> iter(x)
+ |  
+ |  __repr__(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  __setattr__(...)
+ |      x.__setattr__('name', value) <==> x.name = value
+ |  
+ |  close(...)
+ |      close() -> None or (perhaps) an integer.  Close the file.
+ |      
+ |      Sets data attribute .closed to True.  A closed file cannot be used for
+ |      further I/O operations.  close() may be called more than once without
+ |      error.  Some kinds of file objects (for example, opened by popen())
+ |      may return an exit status upon closing.
+ |  
+ |  fileno(...)
+ |      fileno() -> integer "file descriptor".
+ |      
+ |      This is needed for lower-level file interfaces, such os.read().
+ |  
+ |  flush(...)
+ |      flush() -> None.  Flush the internal I/O buffer.
+ |  
+ |  isatty(...)
+ |      isatty() -> true or false.  True if the file is connected to a tty device.
+ |  
+ |  next(...)
+ |      x.next() -> the next value, or raise StopIteration
+ |  
+ |  read(...)
+ |      read([size]) -> read at most size bytes, returned as a string.
+ |      
+ |      If the size argument is negative or omitted, read until EOF is reached.
+ |      Notice that when in non-blocking mode, less data than what was requested
+ |      may be returned, even if no size parameter was given.
+ |  
+ |  readinto(...)
+ |      readinto() -> Undocumented.  Don't use this; it may go away.
+ |  
+ |  readline(...)
+ |      readline([size]) -> next line from the file, as a string.
+ |      
+ |      Retain newline.  A non-negative size argument limits the maximum
+ |      number of bytes to return (an incomplete line may be returned then).
+ |      Return an empty string at EOF.
+ |  
+ |  readlines(...)
+ |      readlines([size]) -> list of strings, each a line from the file.
+ |      
+ |      Call readline() repeatedly and return a list of the lines so read.
+ |      The optional size argument, if given, is an approximate bound on the
+ |      total number of bytes in the lines returned.
+ |  
+ |  seek(...)
+ |      seek(offset[, whence]) -> None.  Move to new file position.
+ |      
+ |      Argument offset is a byte count.  Optional argument whence defaults to
+ |      0 (offset from start of file, offset should be >= 0); other values are 1
+ |      (move relative to current position, positive or negative), and 2 (move
+ |      relative to end of file, usually negative, although many platforms allow
+ |      seeking beyond the end of a file).  If the file is opened in text mode,
+ |      only offsets returned by tell() are legal.  Use of other offsets causes
+ |      undefined behavior.
+ |      Note that not all file objects are seekable.
+ |  
+ |  tell(...)
+ |      tell() -> current file position, an integer (may be a long integer).
+ |  
+ |  truncate(...)
+ |      truncate([size]) -> None.  Truncate the file to at most size bytes.
+ |      
+ |      Size defaults to the current file position, as returned by tell().
+ |  
+ |  write(...)
+ |      write(str) -> None.  Write string str to file.
+ |      
+ |      Note that due to buffering, flush() or close() may be needed before
+ |      the file on disk reflects the data written.
+ |  
+ |  writelines(...)
+ |      writelines(sequence_of_strings) -> None.  Write the strings to the file.
+ |      
+ |      Note that newlines are not added.  The sequence can be any iterable object
+ |      producing strings. This is equivalent to calling write() for each string.
+ |  
